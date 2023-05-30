@@ -44,5 +44,5 @@
 - Tests de sécurité pour identifier les vulnérabilités potentielles.
 - Tests de performance pour évaluer les performances du site déployé.
 
-### Documentation et formation
+### Documentation
 - Préparation d'une documentation détaillée décrivant le processus d'automatisation et les mesures de sécurité mises en place.
