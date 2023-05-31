@@ -10,7 +10,7 @@
 
   Répétabilité et cohérence : Dans nôtre cas, l'automatisation garantit une cohérence dans le déploiement et la gestion du site. Je vais pouvoir utiliser les mêmes scripts ou configurations automatisées pour déployer l'application sur plusieurs environnements, assurant ainsi la cohérence des configurations et réduisant les risques d'erreurs.
 
-  Évolutivité : L'automatisation permet de mettre à l'échelle l'infrastructure de manière plus facile et rapide. Je vais pouvoir créer des scripts ou des modèles d'automatisation qui ajustent automatiquement les ressources en fonction de la charge de travail, permettant ainsi une mise à l'échelle horizontale ou verticale en fonction des besoins de l'application.
+  Elasticité : L'automatisation permet de mettre à l'échelle l'infrastructure de manière plus facile et rapide. Je vais pouvoir créer des scripts ou des modèles d'automatisation qui ajustent automatiquement les ressources en fonction de la charge de travail, permettant ainsi une mise à l'échelle horizontale ou verticale en fonction des besoins de l'application.
 
   Réduction des erreurs : L'automatisation réduit les erreurs manuelles potentielles. En évitant les tâches manuelles et en utilisant des processus automatisés, je minimises les risques d'erreurs humaines qui pourraient survenir lors du déploiement, de la configuration ou de la gestion de l'infrastructure.
 
@@ -22,7 +22,7 @@
   
 
 ### Objectifs du projet
-- Énoncé clair des objectifs du projet : automatiser le déploiement du site existant sur un cluster AKS tout en assurant la sécurité du processus.
+- Enoncé clair des objectifs du projet : automatiser le déploiement du site existant sur un cluster AKS tout en assurant la sécurité du processus.
 - Indication des bénéfices attendus, tels que l'accélération des déploiements, la réduction des erreurs humaines et la protection des données.
 
 ### Avantages du projet 
