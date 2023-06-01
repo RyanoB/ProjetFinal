@@ -1,47 +1,33 @@
 # Cahier des charges ProjetFinal
 
-## Déploiement de CloudPanther via AKS + supervision
-
-### Introduction
-- Automatisation sécurisée du déploiement du site CloudPanther sur un cluster AKS en utilisant github actions.
-- Explication de l'importance de l'automatisation pour l'efficacité opérationnelle.
+## Déploiement de CloudPanther via AKS
   
-  Efficacité et rapidité : L'automatisation permet d'effectuer des tâches répétitives de déploiement et de gestion de manière rapide et efficace. Les processus automatisés peuvent être exécutés en quelques clics ou en utilisant des scripts, ce qui fait gagner du temps et réduit les erreurs humaines.
-
-  Répétabilité et cohérence : Dans nôtre cas, l'automatisation garantit une cohérence dans le déploiement et la gestion du site. Je vais pouvoir utiliser les mêmes scripts ou configurations automatisées pour déployer l'application sur plusieurs environnements, assurant ainsi la cohérence des configurations et réduisant les risques d'erreurs.
-
-  Elasticité : L'automatisation permet de mettre à l'échelle l'infrastructure de manière plus facile et rapide. Je vais pouvoir créer des scripts ou des modèles d'automatisation qui ajustent automatiquement les ressources en fonction de la charge de travail, permettant ainsi une mise à l'échelle horizontale ou verticale en fonction des besoins de l'application.
-
-  Réduction des erreurs : L'automatisation réduit les erreurs manuelles potentielles. En évitant les tâches manuelles et en utilisant des processus automatisés, je minimises les risques d'erreurs humaines qui pourraient survenir lors du déploiement, de la configuration ou de la gestion de l'infrastructure.
-
-  Sécurité renforcée : L'automatisation permet de mettre en place des pratiques de sécurité cohérentes et reproductibles. Je peux automatiser la configuration des règles de sécurité, le déploiement des correctifs de sécurité, la gestion des secrets et d'autres aspects liés à la sécurité, réduisant ainsi les risques de vulnérabilités ou d'erreurs de configuration.
-
-  Documentation et traçabilité : L'automatisation facilite la documentation des processus et des configurations. Les scripts, les modèles et les outils d'automatisation fournissent une traçabilité claire des actions effectuées, ce qui facilite la compréhension des changements apportés à l'infrastructure et permet de résoudre rapidement les problèmes.
-
-  Agilité et évolutivité : L'automatisation permet de répondre rapidement aux besoins changeants de mon application. Je peux facilement répliquer ou migrer mon environnement de développement, de test ou de production en utilisant les mêmes scripts ou configurations automatisées, me permettant ainsi de gagner en agilité et de répondre rapidement aux demandes de déploiement.
-  
-
 ### Objectifs du projet
-- Enoncé clair des objectifs du projet : automatiser le déploiement du site existant sur un cluster AKS tout en assurant la sécurité du processus.
-- Indication des bénéfices attendus, tels que l'accélération des déploiements, la réduction des erreurs humaines et la protection des données.
+
+- Automatiser le déploiement du site existant et consolidation sur un cluster AKS.
+
+- Quel sont les bénéfices attendus ? Accélération des déploiements, réduction des erreurs humaines, protection des données...
 
 ### Avantages du projet 
-- Gestion automatisée des ressources : Kubernetes gère automatiquement l'allocation des ressources et assure une utilisation efficace des ressources disponibles sur le cluster AKS. La mise à l'échelle horizontale et verticale peut être facilement effectuée en ajoutant ou en supprimant des nœuds dans le cluster. 
-  Dans la méthode actuelle, la gestion des ressources (allocation de la capacité de calcul, de la mémoire, etc.) doit être effectuée manuellement sur la VM. Cela peut entraîner une utilisation inefficace des ressources et nécessiter une surveillance et une mise à l'échelle manuelles en cas de besoin.
+    
+- Évolutivité et mise à l'échelle automatique : Un cluster AKS permet de faire évoluer automatiquement les ressources en fonction de la charge de l'application. Cela garantit que l'application peut gérer facilement une augmentation du trafic sans compromettre les performances.
 
-- Haute disponibilité et tolérance aux pannes : Kubernetes garantit la haute disponibilité de l'application en répartissant les charges de travail sur plusieurs nœuds du cluster AKS. En cas de panne d'un nœud, les conteneurs sont redéployés sur d'autres nœuds sains, minimisant ainsi les temps d'arrêt. 
-  Assurer la haute disponibilité de l'application sur une seule VM peut être difficile. En cas de défaillance de la VM, il peut y avoir des temps d'arrêt jusqu'à ce que la VM soit réparée ou remplacée.
+- Gestion simplifiée : L'automatisation facilite la gestion des déploiements, des mises à jour et versions des configurations de l'application sur le cluster AKS. Les tâches répétitives peuvent être automatisées, ce qui réduit les erreurs et les efforts manuels nécessaires pour maintenir l'application en cours d'exécution.
 
-- Gestion simplifiée des mises à jour et des versions : Avec Kubernetes, le déploiement de nouvelles versions ou de mises à jour de l'application peut être réalisé de manière progressive et automatisée sans interruption de service. Les stratégies de déploiement permettent de gérer facilement les changements de version.
-  La mise à jour et le déploiement de nouvelles versions de l'application sur une VM peuvent nécessiter des actions manuelles, ce qui peut entraîner des erreurs et des interruptions de service.
+- Haute disponibilité et tolérance aux pannes : En répartissant l'application sur plusieurs nodes/pods dans un cluster AKS, on assure une meilleure résilience et une disponibilité accrue. En cas de panne d'un node, l'application continue de fonctionner sans interruption grâce à la répartition de charge et à la capacité de basculer automatiquement vers d'autres nodes.
 
-- Sécurité intégrée : Kubernetes offre des fonctionnalités intégrées pour la gestion des secrets, le contrôle d'accès basé sur les rôles (RBAC) et la sécurisation des communications entre les composants de l'application. Cela facilite la mise en place de bonnes pratiques de sécurité.
-  La sécurité doit être configurée et maintenue manuellement sur la VM, ce qui peut être une tâche complexe. La gestion des secrets et des informations d'identification sensibles peut également être plus difficile.
+- Sécurité renforcée : L'utilisation d'un cluster AKS permet de mettre en œuvre des stratégies de sécurité avancées, telles que la gestion des identités et des accès, le chiffrement des données, filtrage des flux (network policy)...
 
-- Portabilité et flexibilité : Kubernetes offre une portabilité accrue des applications. Une fois que l'application est containerisée et déployée sur Kubernetes, je peux la déplacer facilement vers d'autres environnements Kubernetes ou même vers d'autres fournisseurs de cloud. Cela me donne plus de flexibilité pour l'avenir.
-  La migration de l'application vers un autre environnement ou fournisseur de cloud peut être compliquée en raison des dépendances spécifiques à la VM et des configurations spécifiques à l'environnement.
+- Portabilité et flexibilité : Avec un déploiement sur un cluster AKS, l'application devient indépendante de l'infrastructure sous-jacente, ce qui offre une plus grande flexibilité et une facilité de migration vers d'autres environnements de cloud ou de fournisseurs de cloud.
 
-  En résumé, l'utilisation de Kubernetes sur un cluster AKS offre une gestion automatisée des ressources, une haute disponibilité, une gestion simplifiée des mises à jour et des versions, une sécurité intégrée, et une plus grande portabilité et flexibilité par rapport à la méthode de déploiement actuelle de CloudPanther.
+- Optimisation des ressources et des coûts : 
+1. L'automatisation permet d'optimiser l'utilisation des ressources en ajustant automatiquement les capacités en fonction de la charge de travail.
+2. La possibilité de faire tourner d'autres outils/app sur le cluster AKS (consolidation). 
+   Cela permet d'économiser sur les coûts en évitant la surprovisionnement ou la sous-utilisation des ressources.
+
+- Écosystème et intégration : L'utilisation d'un cluster AKS offre un écosystème riche d'outils et de services complémentaires pour faciliter la gestion, le déploiement, la surveillance et l'évolutivité de l'application.
+
+En résumé, la méthode de déploiement sur un cluster AKS avec l'automatisation offre une élasticité, une gestion simplifiée, une haute disponibilité, une sécurité renforcée, une portabilité et une optimisation des ressources et des coûts. Ces avantages contribuent à une meilleure performance, une meilleure gestion de l'application et une expérience utilisateur améliorée.
 
 ### Etapes
 
@@ -49,15 +35,27 @@
 
  - Containerisation du site : Pour déployer CloudPanther sur AKS, il faut d'abord containeriser l'application. Je vais utiliser Docker pour créer une image conteneur. Je dois m'assurer que l'image contient tous les prérequis logiciels nécessaires pour exécuter le site.
 
- - Création du cluster AKS : Je vais maintenant créer un cluster AKS en spécifiant le nombre de nœuds, les tailles des machines virtuelles et les autres paramètres selon les besoins de CloudPanther.
+ - Création du cluster AKS : Je vais maintenant créer un cluster AKS en spécifiant le nombre de nodes, les tailles des machines virtuelles et les autres paramètres selon les besoins de CloudPanther (service, ingress).
 
- - Gestion de la sécurité : Pour garantir la sécurité de mon cluster AKS, je vais utiliser les fonctionnalités fournies par Azure, telles que le contrôle d'accès basé sur les rôles (RBAC), le réseau virtuel (Virtual Network) et les groupes de sécurité réseau (Network Security Groups). Je vais également configurer  le chiffrement TLS pour les communications entrantes et sortantes.
+ - Gestion de la sécurité : Pour garantir la sécurité de mon cluster AKS, je vais utiliser les fonctionnalités fournies par Azure, telles que le contrôle d'accès basé sur les rôles (RBAC). Je vais également configurer  le chiffrement TLS pour les communications entrantes et sortantes.
 
- - Déploiement de l'application : je vais utiliser Kubernetes pour déployer mon application Cloud Panther sur le cluster AKS. Crée des fichiers de déploiement Kubernetes (fichiers YAML) pour décrire les ressources nécessaires (pods, services, ingress, etc.). En m'assurant de bien définir les règles de sécurité dans les fichiers de déploiement.
+ - Déploiement de l'application : Je vais utiliser github action pour l'automatisation des déploiements de mon application Cloud Panther sur le cluster AKS. Crée des fichiers de déploiement Kubernetes (fichiers YAML) pour décrire les ressources nécessaires (deployment, replicaset, services, ingress, etc.). En m'assurant de bien définir les règles de sécurité dans les fichiers de déploiement.
 
- - Surveillance et gestion : Configuration des outils de surveillance tels que Azure Monitor pour suivre les performances et la disponibilité de mon cluster AKS. Je vais utiliser des outils comme Azure Log Analytics pour collecter et analyser les journaux d'application. Sans oublier de mettre en place des mécanismes de sauvegarde et de restauration pour mon cluster AKS.
+ - Surveillance et gestion : Configuration des outils de surveillance tels que Azure Monitor et Prometheus pour suivre les performances et la disponibilité de mon cluster AKS. Sans oublier de mettre en place des mécanismes de sauvegarde et de restauration pour mon cluster AKS.
 
- - Tests et validation : Et finalement, je vais effectuer des tests pour vérifier que le site Cloud Panther fonctionne correctement sur le cluster AKS. Vérifier l'évolutivité, la résilience et la sécurité de l'application dans un environnement de production.
+ - Tests et validation : Et finalement, je vais effectuer des tests de charge, revu de code, génération de la documentation et validation des changements  directement dans mes pipelines.
+
+### Compétences visées 
+
+- Audit et analyse de l'infrastructure existante.
+- Gestion de projet et communication avec les differents intervenants.
+- Automatisation du déploiement de l'infrastructure.
+- Sécurisation de l’infrastructure.
+- Gérer le stockage des données.
+- Gestion de differents services kubernetes.
+- Exploiter une solution de supervision et de backup.
+- Gestion de cycle de vie de l'application CI/CD.
 
 ### Documentation
-- Préparation d'une documentation détaillée décrivant le processus d'automatisation et les mesures de sécurité mises en place.
+- Préparation d'une documentation détaillée décrivant l'architecture, les processus d'automatisation et les mesures de sécurité mises en place.
+
