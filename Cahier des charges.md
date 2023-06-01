@@ -14,7 +14,7 @@
 
   Réduction des erreurs : L'automatisation réduit les erreurs manuelles potentielles. En évitant les tâches manuelles et en utilisant des processus automatisés, je minimises les risques d'erreurs humaines qui pourraient survenir lors du déploiement, de la configuration ou de la gestion de l'infrastructure.
 
-  Sécurité renforcée : L'automatisation permet de mettre en place des pratiques de sécurité cohérentes et reproductibles. je peux automatiser la configuration des règles de sécurité, le déploiement des correctifs de sécurité, la gestion des secrets et d'autres aspects liés à la sécurité, réduisant ainsi les risques de vulnérabilités ou d'erreurs de configuration.
+  Sécurité renforcée : L'automatisation permet de mettre en place des pratiques de sécurité cohérentes et reproductibles. Je peux automatiser la configuration des règles de sécurité, le déploiement des correctifs de sécurité, la gestion des secrets et d'autres aspects liés à la sécurité, réduisant ainsi les risques de vulnérabilités ou d'erreurs de configuration.
 
   Documentation et traçabilité : L'automatisation facilite la documentation des processus et des configurations. Les scripts, les modèles et les outils d'automatisation fournissent une traçabilité claire des actions effectuées, ce qui facilite la compréhension des changements apportés à l'infrastructure et permet de résoudre rapidement les problèmes.
 
@@ -38,7 +38,7 @@
 - Sécurité intégrée : Kubernetes offre des fonctionnalités intégrées pour la gestion des secrets, le contrôle d'accès basé sur les rôles (RBAC) et la sécurisation des communications entre les composants de l'application. Cela facilite la mise en place de bonnes pratiques de sécurité.
   La sécurité doit être configurée et maintenue manuellement sur la VM, ce qui peut être une tâche complexe. La gestion des secrets et des informations d'identification sensibles peut également être plus difficile.
 
-- Portabilité et flexibilité : Kubernetes offre une portabilité accrue des applications. Une fois que ton application est containerisée et déployée sur Kubernetes, tu peux la déplacer facilement vers d'autres environnements Kubernetes ou même vers d'autres fournisseurs de cloud. Cela te donne plus de flexibilité pour l'avenir.
+- Portabilité et flexibilité : Kubernetes offre une portabilité accrue des applications. Une fois que l'application est containerisée et déployée sur Kubernetes, je peux la déplacer facilement vers d'autres environnements Kubernetes ou même vers d'autres fournisseurs de cloud. Cela me donne plus de flexibilité pour l'avenir.
   La migration de l'application vers un autre environnement ou fournisseur de cloud peut être compliquée en raison des dépendances spécifiques à la VM et des configurations spécifiques à l'environnement.
 
   En résumé, l'utilisation de Kubernetes sur un cluster AKS offre une gestion automatisée des ressources, une haute disponibilité, une gestion simplifiée des mises à jour et des versions, une sécurité intégrée, et une plus grande portabilité et flexibilité par rapport à la méthode de déploiement actuelle de CloudPanther.
