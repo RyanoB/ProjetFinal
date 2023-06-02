@@ -48,11 +48,11 @@ En résumé, la méthode de déploiement sur un cluster AKS avec l'automatisatio
 ### Compétences visées 
 
 - Audit et analyse de l'infrastructure existante.
-- Gestion de projet et communication avec les differents intervenants.
+- Gestion de projet et communication avec les différents intervenants.
 - Automatisation du déploiement de l'infrastructure.
 - Sécurisation de l’infrastructure.
 - Gérer le stockage des données.
-- Gestion de differents services kubernetes.
+- Gestion de différents services kubernetes.
 - Exploiter une solution de supervision et de backup.
 - Gestion de cycle de vie de l'application CI/CD.
 
