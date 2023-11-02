@@ -1,10 +1,10 @@
 # Cahier des charges ProjetFinal
 
-## Déploiement de CloudPanther via AKS
+## Déploiement de Wordpress via AKS
   
 ### Objectifs du projet
 
-- Automatiser le déploiement du site existant et consolidation sur un cluster AKS.
+- Automatiser le déploiement de Wordpress et consolidation sur un cluster AKS.
 
 - Quel sont les bénéfices attendus ? Accélération des déploiements, réduction des erreurs humaines, protection des données...
 
@@ -31,15 +31,12 @@ En résumé, la méthode de déploiement sur un cluster AKS avec l'automatisatio
 
 ### Etapes
 
- - Analyse des prérequis : Je doit m'assurer d'avoir les accès nécessaires à l'environnement cloud, y compris les droits d'administrateur pour AKS. Sans oublier de vérifier si Cloud Panther est compatible avec une architecture de conteneurisation.
 
- - Containerisation du site : Pour déployer CloudPanther sur AKS, il faut d'abord containeriser l'application. Je vais utiliser Docker pour créer une image conteneur. Je dois m'assurer que l'image contient tous les prérequis logiciels nécessaires pour exécuter le site.
-
- - Création du cluster AKS : Je vais maintenant créer un cluster AKS en spécifiant le nombre de nodes, les tailles des machines virtuelles et les autres paramètres selon les besoins de CloudPanther (service, ingress).
+ - Création du cluster AKS : Je vais maintenant créer un cluster AKS en spécifiant le nombre de nodes, les tailles des machines virtuelles et les autres paramètres selon les besoins de Wordpress (service, ingress).
 
  - Gestion de la sécurité : Pour garantir la sécurité de mon cluster AKS, je vais utiliser les fonctionnalités fournies par Azure, telles que le contrôle d'accès basé sur les rôles (RBAC). Je vais également configurer  le chiffrement TLS pour les communications entrantes et sortantes.
 
- - Déploiement de l'application : Je vais utiliser github action pour l'automatisation des déploiements de mon application Cloud Panther sur le cluster AKS. Crée des fichiers de déploiement Kubernetes (fichiers YAML) pour décrire les ressources nécessaires (deployment, replicaset, services, ingress, etc.). En m'assurant de bien définir les règles de sécurité dans les fichiers de déploiement.
+ - Déploiement de l'application : Je vais utiliser github action pour l'automatisation des déploiements de mon application sur le cluster AKS. Crée des fichiers de déploiement Kubernetes (fichiers YAML) pour décrire les ressources nécessaires (deployment, replicaset, services, ingress, etc.). En m'assurant de bien définir les règles de sécurité dans les fichiers de déploiement.
 
  - Surveillance et gestion : Configuration des outils de surveillance tels que Azure Monitor et Prometheus pour suivre les performances et la disponibilité de mon cluster AKS. Sans oublier de mettre en place des mécanismes de sauvegarde et de restauration pour mon cluster AKS.
 
@@ -47,8 +44,6 @@ En résumé, la méthode de déploiement sur un cluster AKS avec l'automatisatio
 
 ### Compétences visées 
 
-- Audit et analyse de l'infrastructure existante.
-- Gestion de projet et communication avec les différents intervenants.
 - Automatisation du déploiement de l'infrastructure.
 - Sécurisation de l’infrastructure.
 - Gérer le stockage des données.
