@@ -36,7 +36,7 @@ En résumé, la méthode de déploiement sur un cluster AKS avec l'automatisatio
 
  - Gestion de la sécurité : Pour garantir la sécurité de mon cluster AKS, je vais utiliser les fonctionnalités fournies par Azure, telles que le contrôle d'accès basé sur les rôles (RBAC). Je vais également configurer  le chiffrement TLS pour les communications entrantes et sortantes.
 
- - Déploiement de l'application : Je vais utiliser github action pour l'automatisation des déploiements de mon application sur le cluster AKS. Crée des fichiers de déploiement Kubernetes (fichiers YAML) pour décrire les ressources nécessaires (deployment, replicaset, services, ingress, etc.). En m'assurant de bien définir les règles de sécurité dans les fichiers de déploiement.
+   - Déploiement de l'application : Je vais utiliser github action pour l'automatisation des déploiements de mon application sur le cluster AKS. Crée des fichiers de déploiement Kubernetes (fichiers YAML) pour décrire les ressources nécessaires (deployment, replicaset, services, ingress, etc.). En m'assurant de bien définir les règles de sécurité dans les fichiers de déploiement.
 
  - Surveillance et gestion : Configuration des outils de surveillance tels que Azure Monitor et Prometheus pour suivre les performances et la disponibilité de mon cluster AKS. Sans oublier de mettre en place des mécanismes de sauvegarde et de restauration pour mon cluster AKS.
 
